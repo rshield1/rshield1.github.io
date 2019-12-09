@@ -1,13 +1,13 @@
 # Site settings
-author: Robert Shields
+author: Robert Shields IV
 title: From Aviation to Software Engineer
 header-img: img/home-bg.png
 email: robert.shieldsiv@gmail.com
-copyright_name: Robert Shields
+copyright_name: Robert Shields IV
 description: > # this means to ignore newlines until "baseurl:"
-  A suspenseful journey down the road to tech
+  A Suspenseful Flight Path Breaking Into Tech.
 baseurl: "" # the subpath of your site, e.g. /blog
-twitter_username: RobertShieldsIV
+twitter_username: 
 github_username:  rshield1
 
 # Build settings
