@@ -1,10 +1,13 @@
 ---
 layout: post
-title:      "def software_dev (Robert_Shields_IV)"
-date:       2019-12-16 01:52:00 +0000
+title:      "Aviation to Software Engineer"
+date:       2019-12-15 20:52:01 -0500
 permalink:  def_software_dev_robert_shields_iv
 ---
 
+
+
+def software_dev (Robert_Shields_IV)
 
 puts
 
@@ -16,7 +19,7 @@ It was only until Fall 2018, that I began to question my level of comfort in my 
 
 careers = [“Store manager”, “Photographers”, Personal_Trainer”, “Flight attendant”] 
 
-Most would evaluate my path as lucrative and satisfying.  It wasn’t enough for me, as I searched for ways to challenge myself mentally. So I read, built projects, and began breaking into Technology.  I begin to focus using a “Deep Work” technique and learn about the opportunities in tech, then coded day and night!  I had a good amount of momentum built up, from going through the lessons in FreeCodeCamp to blazing through Udemy courses. It was like I finally figured out what drove me to pursue my passion. The ability to help others, solve issues, and to create things that would help others live a better life!
+Most would evaluate my path as lucrative and satisfying. "You have the opportunity to see the world!"  "You meet so many individuals!" "I bet the money is great"  Although I enjoy seeing places I never thought I'd see.  It wasn’t enough for me, as I searched for ways to challenge myself mentally. I never want to feel like I'm "just another number." So I read, built projects, and began breaking into Technology.  I begin to focus using a “Deep Work” technique and learn about the opportunities in tech, then coded day and night!  I had a good amount of momentum built up, from going through the lessons in FreeCodeCamp to blazing through Udemy courses. It was like I finally figured out what drove me to pursue my passion. The ability to help others, solve issues, and to create things that would help others live a better life!
 
 Life.push(“challenges”)
 
