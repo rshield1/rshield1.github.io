@@ -1,12 +1,10 @@
 ---
 layout: post
-title:      "Procedural Programming?  Why is it Necessary?"
-date:       2020-01-09 23:54:17 +0000
+title:      "Procedural Programming in Ruby?  Why is it Necessary? "
+date:       2020-01-09 18:54:17 -0500
 permalink:  procedural_programming_why_is_it_necessary
 ---
 
-
-Procedural Ruby?  Why is it necessary? 
 
 Procedural programming is a paradigm which requires a series of logical steps & sub-steps in order to solve problems using data. In Ruby, methods are used to modify the state of our programs. The data remains separate from the procedures. Knowing the procedures in Roby is vital, this includes writing statements, manipulating arrays, writing detailed methods, hashes, etc. These are considered the building blocks for implementing logic and abstraction in Ruby. It also creates a smooth transition into Object Oriented Programming. 
 
