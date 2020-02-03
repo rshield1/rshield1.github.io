@@ -1,10 +1,12 @@
 ---
 layout: post
 title:      "CLI Project?  *Sigh* Where to Start! "
-date:       2020-02-03 05:29:11 +0000
+date:       2020-02-03 00:29:12 -0500
 permalink:  cli_project_sigh_where_to_start
 ---
 
+
+WHAT IS THE FIRST STEP?
 
 As I continue to stare at my windows terminal, I reflect on the times I spent learning how to "cd" into folders, check the "directory", and "delete" files, I started to have a mild mental breakdown.  Then, I remember to just write down my tasks, and break them up into smaller, managable "components." 
 
@@ -15,6 +17,9 @@ The next step is to set up my bundle files.  Lets run - bundle gem "name" - so I
 My task was to first write down the actual goals for my program; to let the user interact with the command line to figure out their body type, get standard information about their type, then obtain training techniques to help them train accordingly.  I also want to scrape links from the website based on their goals.  I needed to locate a site I wanted to scrape the information.  I chose scraping for additional practice, since I wasn't fully confident on my ability to efficiently scrape.
 
 Let’s begin!!!
+
+
+THE SETUP
 
 
 Every class should have one job:
@@ -45,6 +50,7 @@ Module.rb <= Used to consolidate and structure my code for a clean feel. --lib/m
 * Using Nokogiri and Open-URI, I can load the url and inspect the page elements to locate the items to scrape beginning with   "@@doc = Nokogiri::HTML(open("https://www.bodybuilding.com/fun/becker3.htm"))"
 * So when the user requests information/training techniques, the url will scrape the paragraphs associated with the body type of the user.  I created this as a class method, so all methods have access to the url. It helps with the continuous calls to scrape the website. 
 
+JUST A FEW CHALLENGES
 
 I had to locate many different ways to scrape out the appropriate paragraphs that were associated with the website.  I was able to recall using the array range to group the paragraphs needed.  Oh, and this is where I HAD to become even better at using 'pry', which is now a big part of me debugging massive lines of intimidating code.  If I have 'pry', I can’t lose!
 
@@ -73,6 +79,8 @@ def all_links
             puts "________________________________"
         end
     end
+		
+PUSH IT ALL UP TO GITHUB
 
 I was able to create and init my Git local repository along with all of the other prerequisites to push my files to my Github repository. Making frequent commits to keep track of my changes helps me remember the process before the push.  Everything is slowly beginning to come together.  I'm finishing up the final touches to my CLI project to tidy up my code.  This project literally took only a few days of endless coding to get the concepts embedded to the point it's starting to come together!
 
