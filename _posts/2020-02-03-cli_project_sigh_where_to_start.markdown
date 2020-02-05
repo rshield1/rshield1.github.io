@@ -86,3 +86,19 @@ I was able to create and init my Git local repository along with all of the othe
 
 I'll get additional feedback from my instructor and review a few lessons to make sure I'm still on the correct track to become a better and efficient developer.  Maybe even add to my program!!
 
+
+UPDATE**
+
+Receiving additional information from my cohort lead made things seem confusing, at first.  However, after having a walkthrough on separation of concerns, made things seem not so bad.  At that moment, I knew that I needed to revisit a few lessons from previous weeks just to make sure I have a clear grasp on OOP concepts.  
+
+For example => def get_ectomorph
+        
+        @@doc.search("#DPG p").children[4..8].text
+        @@doc.search("#DPG p").children[18..20].text
+
+        {name: "Ectomorph",
+        info: @@doc.search("#DPG p").children[4..8].text,
+        training: @@doc.search("#DPG p").children[18..20].text}
+    end
+
+ After obtaining the infomation from scraping the website, I captured it in the @@doc method.  Then I use that variable to create a hash that I will 'puts' in the controller method.  This has been a challenge for me, but I'm learning.  Also I know I need to revist APIs to make sure I understand that as well!
