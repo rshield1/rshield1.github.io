@@ -102,3 +102,25 @@ For example => def get_ectomorph
     end
 
  After obtaining the infomation from scraping the website, I captured it in the @@doc method.  Then I use that variable to create a hash that I will 'puts' in the controller method.  This has been a challenge for me, but I'm learning.  Also I know I need to revist APIs to make sure I understand that as well!
+ 
+ UPDATE***
+   I'm still having slight issues setting up my terminal to receive my SSH keys, but thats an issue for another day!  Today I was able to add addtitional features to my program.  I created an if/else state ment that would iterate over the various Body Types and check to see if a body type as already been scraped.  In order to make sure I stay on track, I continue to create notes, which will help guide me in creating the methods for the future. 
+	 
+	 For example:
+            #I wanted to check if body type already exists in Body_Type.all array.
+            #search for the @name with a find method
+            #If it does not appear in the different bodytypes, run normally
+            #run Body_Type object with (hash) as the argument.
+            #save it under @type	 
+					
+	So the if/else statement looks like this.
+	 
+	 if Body_Type.find_by_name("Ectomorph") == nil
+                hash = Scraper.new.get_ectomorph
+                @type = Body_Type.new(hash)
+            else
+                @type = Body_Type.find_by_name("Ectomorph")
+            end
+ 
+ No need to continue scraping the information if it has already been scraped :)
+ 
