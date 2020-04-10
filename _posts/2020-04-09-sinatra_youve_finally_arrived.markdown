@@ -89,7 +89,11 @@ This will generate a .rb file with a class using inherited my ActiveRecord::Migr
 
 # Using Bootstrap/Ruby Gems
 
-----coming soon----
+Now, its time to beautify my code!  Well, at least make it look a little cleaner.  I decided to create my custom logo will illustrator, along with a few custom pictures that fit the project name.  Also, I used a cool unsplash link that used custom photos during the log-in refresh, sign-up, and the dashboard.  I noticed I spent a lot of time working on making sure that the user experience wasn't sloppy or inefficient.
+
+I was also able to create custom error messages using the Sinatra Flash gem.  It allowed me to control the messages during the refeshing of a user log-in/Sign-up error, and a success alert when a user created a show successfully. 
+
+There were many other gems such as bcrypt, which help with the encription of user password by using the sinatra gem.  This allowed me to control the user's session as long as they were logged in.
 # DRY
 ----coming soon----
 
