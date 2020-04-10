@@ -47,9 +47,9 @@ The technical plan from is that a User has_many Shows, A Show belongs_to a User,
 
 # Using the Corneal gem
 I thought It would be easier to set up my app if I had a way to set up a blueprint of the necessary files for my app.  Thats where Corneal comes in.  Corneal is an app generator for Sinatra that sets up your necessary folders, files, and dependencies to get you started with a simple "corneal new APP-NAME."  Once my files were in place, I added and deleted necessary gems, views, and folders to complete the layout.  I also set up the github repository and created my first git commit..... -m"first commit"
-# Learning with a others 
+# Learning with clean code
 ---------coming soon-------------
-
+Seperation of concerns.  Adding that along with comments and meaningful commits allowed me to focus on a sequential system to plan out my code.
 # Incorporating AR and Associations
 
 In order to primarily connect my app with a database, I have to establish a connection within your environment folder.  This folder holds the information you will require to run your application.
@@ -94,12 +94,24 @@ Now, its time to beautify my code!  Well, at least make it look a little cleaner
 I was also able to create custom error messages using the Sinatra Flash gem.  It allowed me to control the messages during the refeshing of a user log-in/Sign-up error, and a success alert when a user created a show successfully. 
 
 There were many other gems such as bcrypt, which help with the encription of user password by using the sinatra gem.  This allowed me to control the user's session as long as they were logged in.
+
+Tux and Pry were mainly used for testing purposes.  Tux allowed my to test out my tables before migrating them into the database, and Pry was used for testing out my params, to make sure I was obtaining the key/value pairs needed in my .erb forms.
 # DRY
 ----coming soon----
 
 # Getting Feedback
+Getting Feedback was important since I wanted to make sure the user experience was manageable. So I allowed a few of my peers to navigate through the app as we tested for any hiccups or errors that would occur. Also, I created a seeds.rb file that I created Users and Shows.
+```
+User.destroy_all
+Show.destroy_all
 
-----coming soon----
+kenny = User.create(username: 'KennyP', email: "kenny@gmail.com", password_digest: 12345678)
+erica = User.create(username: 'Ericawhite', email: "erica@gmail.com", password_digest: 12345678)
+
+show =Show.create(name: "Ozark", category: "Suspense", seasons: "8", description: "just another show", rating: 5)
+new_show2 =Show.create(name: "Fresh Prince", category: "Comedy", seasons: "8", description: "just another show", rating: 5)
+
+```
 # Completing the checklist
 The specs for completing my project was extremely helpful.  It kept me from straying too much down the wrong path.  
 
