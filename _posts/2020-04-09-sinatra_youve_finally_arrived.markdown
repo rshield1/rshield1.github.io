@@ -48,7 +48,9 @@ The technical plan from is that a User has_many Shows, A Show belongs_to a User,
 # Using the Corneal gem
 I thought It would be easier to set up my app if I had a way to set up a blueprint of the necessary files for my app.  Thats where Corneal comes in.  Corneal is an app generator for Sinatra that sets up your necessary folders, files, and dependencies to get you started with a simple "corneal new APP-NAME."  Once my files were in place, I added and deleted necessary gems, views, and folders to complete the layout.  I also set up the github repository and created my first git commit..... -m"first commit"
 # Learning with clean code
----------coming soon-------------
+---------more coming soon-------------
+
+
 Seperation of concerns.  Adding that along with comments and meaningful commits allowed me to focus on a sequential system to plan out my code.
 # Incorporating AR and Associations
 
