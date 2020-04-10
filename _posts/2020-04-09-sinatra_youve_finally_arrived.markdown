@@ -36,7 +36,7 @@ This was primarily my schema built with illustrator:
 
 -----my schema photo here-----
 
-![](https://www.dropbox.com/h?preview=Binge-rater-schema.jpg)
+https://www.dropbox.com/h?preview=Binge-rater-schema.jpg
 
 
 This schema is a very simple schema, however, I didn't find myself even needing a star class.  I primarily wanted to break up the rating into stars, but I thought that would be too complicated.  I also thought about separating the categories, since they would be collected in the required dropdown list, and users could view shows by category, but that also would be overkill for this application.  I may use all of my weapons when its time to tackle React. 
