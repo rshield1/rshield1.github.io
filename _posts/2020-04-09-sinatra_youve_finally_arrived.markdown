@@ -19,7 +19,7 @@ My Sinatra app- Binge Rater is here!!
 
 ----------photo of the appp--------------
 
-
+![]https://www.dropbox.com/h?preview=Binge-rater-schema.jpg)
 # Getting Started
 Building an app from scratch can be extremely difficult, but worth the challenge.  It gives me the opportunity to begin really showcasing my skills!  I've been able to build difficult things due to the Flatiron labs, but knowing that I'll have to point guard this application myself, it will prepare me for my code reviews if I just add comment as I go!
 
