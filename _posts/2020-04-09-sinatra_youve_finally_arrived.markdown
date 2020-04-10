@@ -47,14 +47,47 @@ The technical plan from is that a User has_many Shows, A Show belongs_to a User,
 
 # Using the Corneal gem
 I thought It would be easier to set up my app if I had a way to set up a blueprint of the necessary files for my app.  Thats where Corneal comes in.  Corneal is an app generator for Sinatra that sets up your necessary folders, files, and dependencies to get you started with a simple "corneal new APP-NAME."  Once my files were in place, I added and deleted necessary gems, views, and folders to complete the layout.  I also set up the github repository and created my first git commit..... -m"first commit"
-# Learning with a friend 
-----coming soon----
-
+# Learning with a others 
+---------coming soon-------------
 
 # Incorporating AR and Associations
 
-----coming soon----
-# Using Bootstrap
+In order to primarily connect my app with a database, I have to establish a connection within your environment folder.  This folder holds the information you will require to run your application.
+```
+#Connecting our database
+ActiveRecord::Base.establish_connection(
+  :adapter => "sqlite3",
+  :database => "db/#{ENV['SINATRA_ENV']}.sqlite"
+)
+```
+You want to create association models that corresponds with your tables
+Model example
+```
+class User < ActiveRecord::Base
+
+has_many :shows
+
+end
+```
+Table example
+```
+class CreateUsers < ActiveRecord::Migration
+  def change
+    create_table :users do |t|
+      t.string :username
+      t.string :email
+      #password digest is for the bcrypt gem, keeps it secured to store encrypted version
+      t.string :password_digest
+    end
+  end
+end
+```
+Having ActiveRecord::Base gives you access to methods such as has_many, belongs_to, and many more to associate your models with one another.
+
+Now I can begin to construct my tables by using 'rake create_migration NAME="name-of-table"'.
+This will generate a .rb file with a class using inherited my ActiveRecord::Migration, which gives you access to certain methods, such as change, up, down, create_table, etc.  It does the SQL queries for us.
+
+# Using Bootstrap/Ruby Gems
 
 ----coming soon----
 # DRY
@@ -64,5 +97,26 @@ I thought It would be easier to set up my app if I had a way to set up a bluepri
 
 ----coming soon----
 # Completing the checklist
-----coming soon----
+The specs for completing my project was extremely helpful.  It kept me from straying too much down the wrong path.  
+
+Specs:
+
+ x Use Sinatra to build the app
+ x Use ActiveRecord for storing information in a database
+ x Include more than one model class (e.g. User, Post, Category)
+ x Include at least one has_many relationship on your User model (e.g. User has_many Posts)
+ x Include at least one belongs_to relationship on another model (e.g. Post belongs_to User)
+ x Include user accounts with unique login attribute (username or email)
+ x Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying
+ x Ensure that users can't modify content created by other users
+ x Include user input validations
+ o BONUS - not required - Display validation failures to user with error message (example form URL      e.g. /posts/new)
+ x Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+ 
+Confirm
+
+ x You have a large number of small Git commits
+ x Your commit messages are meaningful
+ x You made the changes in a commit that relate to the commit message
+ x You don't include changes in a commit that aren't related to the commit message
 
