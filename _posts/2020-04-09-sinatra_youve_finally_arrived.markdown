@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Sinatra, You've Finally Arrived"
-date:       2020-04-10 01:06:09 +0000
+date:       2020-04-09 21:06:10 -0400
 permalink:  sinatra_youve_finally_arrived
 ---
 
@@ -36,6 +36,8 @@ This was primarily my schema built with illustrator:
 
 -----my schema photo here-----
 
+![](https://www.dropbox.com/h?preview=Binge-rater-schema.jpg)
+
 
 This schema is a very simple schema, however, I didn't find myself even needing a star class.  I primarily wanted to break up the rating into stars, but I thought that would be too complicated.  I also thought about separating the categories, since they would be collected in the required dropdown list, and users could view shows by category, but that also would be overkill for this application.  I may use all of my weapons when its time to tackle React. 
 
@@ -45,21 +47,22 @@ The technical plan from is that a User has_many Shows, A Show belongs_to a User,
 
 # Using the Corneal gem
 I thought It would be easier to set up my app if I had a way to set up a blueprint of the necessary files for my app.  Thats where Corneal comes in.  Corneal is an app generator for Sinatra that sets up your necessary folders, files, and dependencies to get you started with a simple "corneal new APP-NAME."  Once my files were in place, I added and deleted necessary gems, views, and folders to complete the layout.  I also set up the github repository and created my first git commit..... -m"first commit"
-# Learning with a friend
+# Learning with a friend 
+----coming soon----
 
 
 # Incorporating AR and Associations
 
-
+----coming soon----
 # Using Bootstrap
 
-
+----coming soon----
 # DRY
-
+----coming soon----
 
 # Getting Feedback
 
-
+----coming soon----
 # Completing the checklist
-
+----coming soon----
 
