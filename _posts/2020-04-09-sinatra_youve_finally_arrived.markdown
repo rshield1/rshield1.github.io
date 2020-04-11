@@ -19,7 +19,7 @@ My Sinatra app- Binge Rater is here!!
 
 ----------photo of the appp--------------
 
-![]https://www.dropbox.com/h?preview=Binge-rater-schema.jpg)
+![](https://www.dropbox.com/h?preview=Binge-rater-schema.jpg)
 # Getting Started
 Building an app from scratch can be extremely difficult, but worth the challenge.  It gives me the opportunity to begin really showcasing my skills!  I've been able to build difficult things due to the Flatiron labs, but knowing that I'll have to point guard this application myself, it will prepare me for my code reviews if I just add comment as I go!
 
@@ -47,11 +47,10 @@ The technical plan from is that a User has_many Shows, A Show belongs_to a User,
 
 # Using the Corneal gem
 I thought It would be easier to set up my app if I had a way to set up a blueprint of the necessary files for my app.  Thats where Corneal comes in.  Corneal is an app generator for Sinatra that sets up your necessary folders, files, and dependencies to get you started with a simple "corneal new APP-NAME."  Once my files were in place, I added and deleted necessary gems, views, and folders to complete the layout.  I also set up the github repository and created my first git commit..... -m"first commit"
-# Learning with clean code
----------more coming soon-------------
+# Seperation of Concerns & Clean Code
 
 
-Seperation of concerns.  Adding that along with comments and meaningful commits allowed me to focus on a sequential system to plan out my code.
+Seperation of concerns.  Adding that along with comments and meaningful commits allowed me to focus on a sequential system to plan out my code.  This including separating and connecting files and folder to practice on being an organized developer.  For example, my "app" folder holds all of my models, views, controller, and helpers folders.  Separating them further into their own individual objects based on their actions, helps a developler navigate throught your code with ease. Maximizing the DRY method will further make the code seem simple and clean, while using words that corresponds to the action methods.  The Ruby syntax makes it easy for me to explain my code as well.
 # Incorporating AR and Associations
 
 In order to primarily connect my app with a database, I have to establish a connection within your environment folder.  This folder holds the information you will require to run your application.
@@ -99,8 +98,52 @@ There were many other gems such as bcrypt, which help with the encription of use
 
 Tux and Pry were mainly used for testing purposes.  Tux allowed my to test out my tables before migrating them into the database, and Pry was used for testing out my params, to make sure I was obtaining the key/value pairs needed in my .erb forms.
 # DRY
-----coming soon----
+Don't Repeat Yourself!  Yea, you heard it!  I wanted show a form of limiting repetitiveness in my code.  I've create helper methods that will further track the user sessions and check if user is logged in.  I created the helper.rb file in my "app" folder.  I noticed that in order to use CRUD within user shows, I'd need to verify if the user is logged in often.  So I decided to create helper methods
+```
+class Helpers
 
+
+def self.is_logged_in?(session)
+    #is there a user id in our session?
+    session[:user_id] ? true : false
+end
+
+
+
+
+end
+```
+I wanted to check if a user was logged in by verifying if a session[:user_id] was active.  But before that step, I knew I had to very the actual user, so I wanted to control that acutal user throughout the entire app.  I created another method
+```
+def self.current_user(session)
+
+    #what user is supposed to be logged in
+    User.find_by(id: session[:user_id])
+
+end
+```
+
+The session[:user_id} belongs to the user's id, so only the appropriate user could use CRUD on the things that "belongs_to" them. For example:
+```
+#dynamic route
+
+get '/shows/:id/edit' do
+
+        #we find the show's id
+				
+        @show = Show.find_by(id: params[:id])
+				
+				#were saying if the session doesn't exist, or the show doesn't exists, or the user that the show belongs to doesn't match with the current user, then redirect.  Else the user should match to show the edit page.
+				
+        if !Helpers.is_logged_in?(session) || !@show || @show.user != Helpers.current_user(session)
+            redirect '/'
+						
+        end
+        erb :'/shows/edit'
+    end
+```
+
+I spend a few time during my code trying to check for those conditions, so I decided to create those methods that will prevent DRY.  I'm sure there are other minor fixes I can find that will clean up my code.
 # Getting Feedback
 Getting Feedback was important since I wanted to make sure the user experience was manageable. So I allowed a few of my peers to navigate through the app as we tested for any hiccups or errors that would occur. Also, I created a seeds.rb file that I created Users and Shows.
 ```
@@ -137,4 +180,7 @@ Confirm
  x Your commit messages are meaningful
  x You made the changes in a commit that relate to the commit message
  x You don't include changes in a commit that aren't related to the commit message
+ 
+ 
+ The checklist seems to be complete but we will see what becomes of it!
 
