@@ -64,7 +64,7 @@ I believe anonymouss functions are just one of those that are hit or miss at the
 
 - Did you know?
 
-Did you know if you use const besides using function, you can avoid using .bind(this)?  Its like const knows that when you are inside the function, you arent referring to the function when you say "this", but the state of the class.
+Did you know if you use const besides using function, you can avoid using .bind(this)?  Its like const knows that when you are inside the function, you arent referring to the function when you say "this", but the state of the class.  If you were to use the function using the function keyword, "this" is referring to the function itself.
 
 - { connect } to store
 knowing when to use { connect } from react-redux is still new, however I know that whenever I need information from the state, I'll need to use connect.  Its similar to using context, but without all of the complexities of redux.
